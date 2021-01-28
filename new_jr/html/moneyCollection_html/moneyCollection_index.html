@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资金归集关系</title>
+    <script src="../../res/js/jquery.min.js"></script>
+    <script src="../../res/js/bootstrap.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <base target="_blank" />
+</head>
+
+<style>
+    body {
+        background-color: #272b30;
+        padding: 30px 40px;
+        text-align: center;
+    }
+
+
+    #mode select{
+        display: inline-block;
+        background-color: #2a2b30;
+        border: 1px solid #fff;
+        color: #2a2b30;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+    #mode {
+        position: relative;
+        top:60px;
+        alignment: center;
+
+    }
+
+    #mode a {
+        display: inline-block;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: color, background-color .3s;
+        -o-transition: color, background-color .3s;
+        -ms-transition: color, background-color .3s;
+        -moz-transition: color, background-color .3s;
+        -webkit-transition: color, background-color .3s;
+    }
+    #mode a.active,#mode a:hover{
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+    }
+
+
+    #explanation span {
+        display: inline-block;
+        border: 1px solid #f3f3f3;
+        width: 200px;
+        height: 250px;
+        /*margin-bottom: 10px;*/
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 10px;
+        word-wrap: break-word;
+        top: 1px;
+        text-align: left;
+    }
+    #explanation {
+        position: relative;
+        top:80px;
+        alignment:top;
+    }
+    /*#img {*/
+    /*    margin-top: 50px;*/
+    /*}*/
+
+</style>
+
+<body>
+<h1 style="color: #afaaaa; font-size: 30px; text-align: center; ">资金归集关系类型索引</h1>
+
+
+</div>
+
+<div id="mode">
+
+    <a href="./moneyCollection.html" style="color: #afaaaa;font-size: 15px;width: 150px">moneyCollection</a>
+
+    <select style="color: #afaaaa;font-size: 15px;height: 38px" id="all_select" onchange="window.open(this.options[this.selectedIndex].value)">
+        <option>请选择all分组</option>
+        <option value="./all_0.html">all_0</option>
+        <option value="./all_1.html">all_1</option>
+        <option value="./all_2.html">all_2</option>
+        <option value="./all_3.html">all_3</option>
+        <option value="./all_4.html">all_4</option>
+    </select>
+</div>
+
+<div id="explanation">
+    <span style="color: #afaaaa;position: relative;top:30px"><br>moneyCollection：具有赛题中定义的资金归集行为的子图<br><br>可点击页面，在左下角查看具体交易详情<br><br>资金归集判别规则<br>1、贷款发放金额*0.9<=对外转账金额<=贷款发放金额
+<br>2、转账日期在贷款发放后5日内
+    </span>
+    <span style="color: #afaaaa;position: relative;top:30px"><br>all:不具有资金归集行为但存在贷款和转账交易的所有子图<br><br>1、具体的交互逻辑可参照首页的操作指南<br>2、可视化逻辑可参照本页面的可视化视图说明<br><br><br><br><br>
+    </span>
+
+<div id="img_index", style="position: absolute;left:0px;top:-65px">
+    <img src="../../res/image/moneyCollection_index.jpg", style="width: 78px;height:120px">
+</div>
+</div>
+<div style="position:absolute;left: 20px;top: 290px">
+    <span style="color: #afaaaa;position: relative;font-size: 10px;width: 250px;display: inline-block;text-align: left">
+        <b>可视化视图说明</b><br>1、'start','mid','end'类型，分别为具有资金归集行为的子图的根节点，中间节点，叶子节点<br>
+        2、pos：在与其他节点有资金交易且总收入为正的节点<br>neg:与其他节点有资金交易且总收入为正的节点<br>节点大小：资金净流入流出量的绝对值。比如一个很大的蓝色节点可能为一个资金充足的贷款公司<br>
+        3、边表示两个节点之间的交易关系。箭头指向资金流入方向，边的粗细与交易额为正相关关系，边的透明度越低则表示连接的两个节点交易越频繁（初始透明度为50%），边的文字说明了该次交易的时间
+
+    </span>
+
+</div>
+</body>
+
+<script>
+</script>
+</html>

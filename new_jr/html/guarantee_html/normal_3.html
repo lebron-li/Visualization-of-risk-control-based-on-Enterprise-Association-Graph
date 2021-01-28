@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Normal_3</title>
+    <script src="../../res/js/d3.js"></script>
+    <script src="../../res/js/jquery.min.js"></script>
+    <script src="../../res/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../res/style.css" type = "text/css">
+
+</head>
+<body>
+<div class="total_left">
+    <h2 class="title">Normal_3</h2>
+
+    <div class="mode">
+        <span>Circles</span>
+        <span>Texts</span>
+    </div>
+    <div class="search1">
+        <input type="text" value="search by id" id="search_id" style="color: #afaaaa">
+    </div>
+    <div class="search2">
+        <input type="text" value="search by type" id="search_type" style="color: #afaaaa">
+    </div>
+    <div class="indicator">
+    </div>
+</div>
+<div class="svg">
+    <svg class="svg1"></svg>
+
+    <div class="info">
+        <h4></h4>
+        <h5></h5>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        var names = ['Chain', 'Mutual','Focus','Cross','Circle','Normal','doubleRisk','tripleRisk','quadraRisk'];
+        var colors = ['#37a6ff','#a3ade9','#73c187','#ffd5b5','#8259ab','#ffffff','#f1761b','#f65d5d','#ff0000'];
+
+        for (var i = 0; i < names.length; i++) {
+            $('.indicator').append("<div><span style='background-color: " + colors[i] + "'></span>" + names[i] + "</div>");
+        }
+
+        var svg = d3.select(".svg1");
+        svg.call(d3.zoom()
+            .scaleExtent([0.1, 8])
+            .on("zoom", function () {
+                $("g").attr("transform", d3.event.transform)
+            })
+        );
+
+        var svgCenterWidth=document.documentElement.clientWidth/3;
+        var svgCenterHeight=document.documentElement.clientHeight/2;
+
+        var simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(function (d) {
+                return d.id;
+            }))
+            .force("charge", d3.forceManyBody())
+            .force("center", d3.forceCenter(svgCenterWidth, svgCenterHeight));
+
+        var graph;
+        d3.json("../../res/json/guarantee_json/doubleNormal_3.json", function (error, data) {
+            if (error) throw error;
+            graph = data;
+            var link = svg.append("g").attr("class", "links")
+                .selectAll("line").data(graph.links)
+                .enter().append("line")
+                .attr("stroke-width", function (d) {
+                    return Math.sqrt(Math.sqrt(d.amount))/20;
+                })
+            var edgesText = svg.append("g")
+                .selectAll('.linetext')
+                .data(graph.links)
+                .enter()
+                .append('text')
+                .attr('class',"edgesTexts")
+                .text((d) => {
+                    return d.amount;
+                })
+                .attr("font-size", function (d) {
+                    return 5;
+                })
+                .attr('fill','#f2f2f2')
+                .attr('opacity','0.5')
+            var marker=	svg.append("marker")
+                .attr("id", "resolved")
+                .attr("markerUnits","userSpaceOnUse")
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX",26)
+                .attr("refY", 0)
+                .attr("markerWidth", 5)
+                .attr("markerHeight", 6)
+                .attr("orient", "auto")
+                .attr("stroke-width",2)
+                .append("path")
+                .attr("d", "M0,-5L10,0L0,5")
+                .attr('fill','#4e88af');
+            var node = svg.append("g").attr("class", "nodes")
+                .selectAll("circle").data(graph.nodes)
+                .enter().append("circle").attr("r", function (d) {
+                    return d.size/4+2;
+                }).attr("fill", function (d) {
+                    return colors[d.group];
+                })
+                .attr("stroke", 'none')
+                .attr("name", function (d) {
+                    return d.id;
+                }).call(
+                    d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended));
+            var text = svg.append("g").attr("class", "texts")
+                .selectAll("text").data(graph.nodes)
+                .enter().append("text")
+                .attr("font-size", function (d) {
+                    return d.size/4+2;
+                }).attr("fill", function (d) {
+                    return colors[d.group];
+                }).attr("name", function (d) {
+                    return d.id;
+                }).text(function (d) {
+                    return d.id;
+                }).attr("text-anchor", 'middle')
+                .call(
+                    d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended)
+                );
+
+            node.append("title").text(function (d) {
+                return d.id;
+            });
+            simulation
+                .nodes(graph.nodes)
+                .on("tick", ticked);
+
+            simulation.force("link")
+                .links(graph.links)
+
+            function ticked() {
+                link
+                    .attr("x1", function (d) {
+                        return d.source.x;
+                    })
+                    .attr("y1", function (d) {
+                        return d.source.y;
+                    })
+                    .attr("x2", function (d) {
+                        return d.target.x;
+                    })
+                    .attr("y2", function (d) {
+                        return d.target.y;
+                    })
+                    .attr("marker-end", "url(#resolved)");
+
+                edgesText.attr('x', function (d) {
+                    return (d.source.x + d.target.x) / 2-1;
+                })
+                edgesText.attr('y', function (d) { return (d.source.y + d.target.y) / 2 })
+
+
+                node
+                    .attr("cx", function (d) {
+                        return d.x;
+                    })
+                    .attr("cy", function (d) {
+                        return d.y;
+                    });
+
+                text.attr('transform', function (d) {
+                    return 'translate(' + d.x + ',' + (d.y + d.size / 2) + ')';
+                });
+            }
+        });
+
+        var dragging = false;
+        function dragstarted(d) {
+            if (!d3.event.active) simulation.alphaTarget(0.1).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+            dragging = true;
+        }
+        function dragged(d) {
+            d.fx = d3.event.x;
+            d.fy = d3.event.y;
+        }
+        function dragended(d) {
+            if (!d3.event.active) simulation.alphaTarget(0.0001);
+            d.fx = null;
+            d.fy = null;
+            dragging = false;
+        }
+
+        $('.mode span').click(function (event){
+            $('.mode span').removeClass('active');
+            $(this).addClass('active');
+            if ($(this).text()=='Circles'){
+                $('.texts text').hide();
+                $('.nodes circle').show();
+            }else{
+                $('.texts text').show();
+                $('.nodes circle').hide();
+            }
+        });
+
+        $('.svg1').on('mouseenter','.nodes circle', function (event){
+            var name =$(this).attr('name');
+            var Gid_name = $(this)['context'].__data__.Gid;
+            var ctx_name= $(this)['context'].__data__.ctx;
+            console.log($(this)['context'].__data__.ctx);
+            $('.info h5').css('color', $(this).attr('fill')).text('id: '+name);
+            $('.info h4').css('color', $(this).attr('fill')).text('type: '+ctx_name);
+            $('.info p').remove();
+
+            if (!dragging) {
+                d3.select(".svg1 .nodes").selectAll('circle').attr('class', function (d) {
+                    if (d.id == name) {
+                        return '';
+                    }
+                    for (var i = 0; i < graph.links.length; i++) {
+                        if (graph.links[i]['source'].Gid == Gid_name && graph.links[i]['target'].Gid == d.Gid) {
+                            return '';
+                        }
+                        if (graph.links[i]['target'].Gid == Gid_name && graph.links[i]['source'].Gid == d.Gid) {
+                            return '';
+                        }
+                    }
+                    return 'inactive';
+                });
+
+                d3.select(".svg1 .links").selectAll('line').attr('class', function(d) {
+                    if (d.source.Gid == Gid_name || d.target.Gid == Gid_name) {
+                        return '';
+                    } else {
+                        return 'inactive';
+                    }
+                });
+            }
+
+        })
+
+        $('.svg1').on('mouseleave', '.nodes circle', function(event) {
+            if (!dragging) {
+                d3.select('.svg1 .nodes').selectAll('circle').attr('class', '');
+                d3.select('.svg1 .links').selectAll('line').attr('class', '');
+            }
+        });
+
+        $('.svg1').on('mouseenter', '.texts text', function(event) {
+            var name =$(this).attr('name');
+            var Gid_name = $(this)['context'].__data__.Gid;
+            var ctx_name= $(this)['context'].__data__.ctx;
+            console.log($(this)['context'].__data__.ctx);
+            $('.info h5').css('color', $(this).attr('fill')).text('id: '+name);//标题的填充色赋给了右边标题,颜色取this的fill，文本取name
+            $('.info h4').css('color', $(this).attr('fill')).text('type: '+ctx_name);//$('.info h4').css('color', ctx_name.attr('fill')).text(name);
+            $('.info p').remove(); //把之前进入的circle的信息去掉
+            if (!dragging) {
+                d3.select('.svg1 .texts').selectAll('text').attr('class', function(d) {
+                    if (d.id == name) {
+                        return ''; //如果是鼠标悬浮选中的那个圆
+                    }
+                    for (var i = 0; i < graph.links.length; i++) {
+                        if (graph.links[i]['source'].Gid == Gid_name && graph.links[i]['target'].Gid == d.Gid) {
+                            return '';
+                        }
+                        if (graph.links[i]['target'].Gid == Gid_name && graph.links[i]['source'].Gid == d.Gid) {
+                            return '';
+                        }
+                    }
+                    return 'inactive';
+                });
+                d3.select(".svg1 .links").selectAll('line').attr('class', function(d) {
+                    if (d.source.Gid == Gid_name || d.target.Gid == Gid_name) {
+                        return '';
+                    } else {
+                        return 'inactive';
+                    }
+                });
+            }
+        });
+
+        $('.svg1').on('mouseleave', '.texts text', function(event) {
+            if (!dragging) {
+                d3.select('.svg1 .texts').selectAll('text').attr('class', '');
+                d3.select('.svg1 .links').selectAll('line').attr('class', '');
+            }
+        });
+
+        $('.search1 input').keyup(function(event) {
+            if ($(this).val() == '') {
+                d3.select('.svg1 .texts').selectAll('text').attr('class', '');
+                d3.select('.svg1 .nodes').selectAll('circle').attr('class', '');
+                d3.select('.svg1 .links').selectAll('line').attr('class', '');
+            } else {
+                var name = $(this).val();
+                d3.select('.svg1 .nodes').selectAll('circle').attr('class', function(d) {
+                    if (d.id.toLowerCase().indexOf(name.toLowerCase()) >= 0) {
+                        return '';
+                    } else {
+                        return 'inactive';
+                    }
+                });
+                d3.select('.svg1 .texts').selectAll('text').attr('class', function(d) {
+                    if (d.id.toLowerCase().indexOf(name.toLowerCase()) >= 0) {
+                        return '';
+                    } else {
+                        return 'inactive';
+                    }
+                });
+                d3.select(".svg1 .links").selectAll('line').attr('class', function(d) {
+                    return 'inactive';
+                });
+            }
+        });
+
+
+        $('.search2 input').keyup(function(event) {
+            if ($(this).val() == '') {
+                d3.select('.svg1 .texts').selectAll('text').attr('class', '');
+                d3.select('.svg1 .nodes').selectAll('circle').attr('class', '');
+                d3.select('.svg1 .links').selectAll('line').attr('class', '');
+            } else {
+                var name = $(this).val();
+                d3.select('.svg1 .nodes').selectAll('circle').attr('class', function(d) {
+                    if (d.class.toLowerCase().indexOf(name.toLowerCase()) >= 0) {
+                        return '';
+                    } else if(d.ctx.toLowerCase().indexOf(name.toLowerCase()) >= 0){
+                        return '';
+                    }else {
+                        return 'inactive';
+                    }
+                });
+                d3.select('.svg1 .texts').selectAll('text').attr('class', function(d) {
+                    if (d.class.toLowerCase().indexOf(name.toLowerCase()) >= 0) {
+                        return '';
+                    } else if(d.ctx.toLowerCase().indexOf(name.toLowerCase()) >= 0){
+                        return '';
+                    }else {
+                        return 'inactive';
+                    }
+                });
+                d3.select(".svg1 .links").selectAll('line').attr('class', function(d) {
+                    return 'inactive';
+                });
+            }
+        });
+
+        var input1=document.getElementById("search_id");
+        input1.onfocus=function(){
+            if(this.value=="search by id")
+                this.value="";
+            this.style.color="#fffffa";
+        }
+        input1.onblur=function(){
+            if(this.value==""){
+                this.value="search by id";
+                this.style.color="#999";
+            }
+        }
+        var input2=document.getElementById("search_type");
+        input2.onfocus=function(){
+            if(this.value=="search by type")
+                this.value="";
+            this.style.color="#fffffa";
+        }
+        input2.onblur=function(){
+            if(this.value==""){
+                this.value="search by type";
+                this.style.color="#999";
+            }
+        }
+    });
+</script>
+</html>

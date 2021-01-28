@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f941c5bd-aedf-45e0-befd-117fb9387012" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1le8NhnYzW474QJVCWj4HMm4BGx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/leetcode" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Web_Coding\WebStorm 2020.2.3\new_jr\new_html" />
+      <recent name="C:\Web_Coding\WebStorm 2020.2.3\new_jr\new_html\guarantee_html" />
+      <recent name="C:\Web_Coding\WebStorm 2020.2.3\new_jr\res" />
+      <recent name="C:\Web_Coding\WebStorm 2020.2.3\new_jr" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f941c5bd-aedf-45e0-befd-117fb9387012" name="Default Changelist" comment="" />
+      <created>1607946157565</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607946157565</updated>
+      <workItem from="1607946158635" duration="2890000" />
+      <workItem from="1607949405704" duration="10413000" />
+      <workItem from="1607996454513" duration="13235000" />
+      <workItem from="1608030406386" duration="79000" />
+      <workItem from="1608042642172" duration="1037000" />
+      <workItem from="1608082786604" duration="15000" />
+      <workItem from="1608119357849" duration="1035000" />
+      <workItem from="1608378046802" duration="65000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2341" y="98" key="FileChooserDialogImpl" timestamp="1608378110318">
+      <screen x="1920" y="0" width="1280" height="693" />
+    </state>
+    <state x="2341" y="98" key="FileChooserDialogImpl/1920.0.1280.693/0.0.1920.1040@1920.0.1280.693" timestamp="1608378110318" />
+    <state x="1920" y="0" width="1294" height="733" key="dock-window-1" timestamp="1607956206440">
+      <screen x="1920" y="0" width="1280" height="693" />
+    </state>
+    <state x="1920" y="0" width="1294" height="733" key="dock-window-1/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1607956206440" />
+    <state x="1920" y="0" width="1294" height="733" key="dock-window-2" timestamp="1607997436854">
+      <screen x="1920" y="0" width="1280" height="693" />
+    </state>
+    <state x="1920" y="0" width="1294" height="733" key="dock-window-2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1607997436854" />
+  </component>
+</project>

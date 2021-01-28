@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>担保关系</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../res/js/jquery.min.js"></script>
+    <script src="../../res/js/bootstrap.min.js"></script>
+    <base target="_blank" />
+</head>
+
+<style>
+    body {
+        background-color: #272b30;
+        padding: 30px 40px;
+        text-align: center;
+    }
+    #mode span.active,#mode span:hover{
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+    }
+    #mode select{
+        display: inline-block;
+        background-color: #2a2b30;
+        border: 1px solid #fff;
+        color: #2a2b30;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+    #mode span {
+        display: inline-block;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: color, background-color .3s;
+    }
+    #mode {
+        position: relative;
+        top:60px;
+        alignment: center;
+
+    }
+    #mode a {
+        display: inline-block;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: color, background-color .3s;
+    }
+    #mode a.active,#mode a:hover{
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+    }
+
+    #explanation span {
+        display: inline-block;
+        border: 1px solid #f3f3f3;
+        width: 160px;
+        /*margin-bottom: 10px;*/
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 10px;
+        word-wrap: break-word;
+        top: 1px;
+        text-align: left;
+    }
+    #explanation {
+        position: relative;
+        top:80px;
+        alignment:top;
+    }
+    #img_index span {
+        display: inline-block;
+        /*border: 1px solid #f3f3f3;*/
+        width: 140px;
+        /*margin-bottom: 10px;*/
+        color: #fff;
+        padding: 2px 10px;
+        border-radius: 4px;
+        font-size: 10px;
+        word-wrap: break-word;
+        top: 1px;
+        text-align: left;
+    }
+    #img_index {
+        position: relative;
+        top:180px;
+        alignment:top;
+    }
+
+</style>
+
+<body>
+<h1 style="color: #afaaaa; font-size: 30px; text-align: center; ">担保关系类型索引</h1>
+
+
+</div>
+
+<div id="mode">
+    <a href="./circle.html" style="color: #afaaaa;font-size: 15px;width: 150px">Circle</a>
+    <a href="./cross.html" style="color: #afaaaa;font-size: 15px;width: 150px">Cross</a>
+    <a href="./focus.html" style="color: #afaaaa;font-size: 15px;width: 150px">Focus</a>
+    <a href="./chain.html" style="color: #afaaaa;font-size: 15px;width: 150px">Chain</a>
+    <a href="./mutual.html" style="color: #afaaaa;font-size: 15px;width: 150px">Mutual</a>
+
+    <select style="color: #afaaaa;font-size: 15px;height: 38px" id="normal_select" onchange="window.open(this.options[this.selectedIndex].value)">
+        <option value="normal_group">请选择normal分组</option>
+        <option value="./normal_0.html">normal_0</option>
+        <option value="./normal_1.html">normal_1</option>
+        <option value="./normal_2.html">normal_2</option>
+        <option value="./normal_3.html">normal_3</option>
+        <option value="./normal_4.html">normal_4</option>
+    </select>
+
+</div>
+
+<div id="explanation">
+    <span style="color: #afaaaa;position: relative;top:30px">Circle：担保圈<br><br>所有含有担保圈的子图。要注意的是形成担保圈的企业可能含有其他类型风险，比如某一些企业形成了担保圈又有”互保“的现象，所以其标记为doubleRisk等多重风险，可将鼠标移动到相应企业后在右上方查看具体风险种类<br><br><br></span>
+    <span style="color: #afaaaa;position: relative;top:30px">Cross: “一保多”<br><br>含有“一保多”现象的子图。“一保多”企业（该企业可能为担保机构）为两个以上企业提供担保，这些必须通过担保机构才能够在银行获得贷款的中小企业，往往资产规模更小，出现违约的可能性更大；且过多的为其他企业做出担保，会带来较大风险<br><br></span>
+    <span style="color: #afaaaa;position: relative;top:30px">Focus: “多保一”<br><br>含有“多保一”现象的子图。“多保一”企业被两个以上企业提供担保，这些需要多个企业或机构担保的企业，资金缺口较大，其资产现金流出现问题的概率更大，抗风险能力也较弱。该企业一旦出现风险，风险会扩散给多个企业或机构<br><br></span>
+    <span style="color: #afaaaa;position: relative;top:30px">Chain: 担保链<br><br>只含有担保链的子图。需要强调的是，这里展示的是只含有担保链的子图。此外，在circle, cross, focus, mutual的图中都有担保链的存在，但其担保链中的某些企业混合有其他风险，所以这些企业标记为doubleRisk等多重风险<br><br></span>
+    <span style="color: #afaaaa;position: relative;top:30px">Mutual: 互保<br><br>含有“互保”现象的子图。实际上，在该图中，基本不存在单独的两个企业形成互保关系的子图，形成互保现象的企业都在子图中形成了其他风险，所以这些企业标记为doubleRisk等多重风险，可将鼠标移动到相应企业后在右上方查看具体风险种类</span>
+    <span style="color: #afaaaa;position: relative;top:30px">Normal： “一保一”<br><br>只含有“一保一”现象的子图。在该图中，一个企业和机构对另外一个企业或机构提供担保，属于正常的担保现象，相较于其他子图的担保模式，“一对一”担保关系所带来的风险较低<br><br><br><br><br></span>
+</div>
+<div id="img_index", style="position: absolute;left: 10px;top:90px">
+    <img src="../../res/image/guarantee_index.jpg", style="width: 110px;height:180px">
+    <span style=" position: absolute;left: 0px;top:190px;color: #afaaaa">
+        <b>可视化视图说明</b><br>1、节点的大小表示了该节点在其所在子图中的影响力，越大的节点所代表的企业，违约后对子图中的其他企业影响越大<br>2、边越粗则表示担保的金额越大，边显示的数字则为该担保行为的担保金额
+        <br>3、doubleRisk, tripleRisk, quadraRisk类型意味着分别包含了二、三、四种混合风险。鼠标移动到含有混合风险的节点后，可在右上角查看具体含有风险的种类
+    </span>
+</div>
+</body>
+
+<script>
+
+</script>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制关系</title>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <base target="_blank" />
+</head>
+
+<style>
+    body {
+        background-color: #272b30;
+        padding: 30px 40px;
+        text-align: center;
+        /*font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;*/
+    }
+    #mode span.active,#mode span:hover{
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+    }
+
+    #mode select{
+        display: inline-block;
+        background-color: #2a2b30;
+        border: 1px solid #fff;
+        color: #2a2b30;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+    #mode {
+        position: relative;
+        top:60px;
+        alignment: center;
+
+    }
+    #mode a {
+        display: inline-block;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: color, background-color .3s;
+        -o-transition: color, background-color .3s;
+        -ms-transition: color, background-color .3s;
+        -moz-transition: color, background-color .3s;
+        -webkit-transition: color, background-color .3s;
+    }
+    #mode a.active,#mode a:hover{
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+    }
+
+
+    #explanation select{
+        display: inline-block;
+        background-color: #2a2b30;
+        border: 1px solid #fff;
+        color: #2a2b30;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+    #explanation span {
+        display: inline-block;
+        border: 1px solid #fff;
+        width: 170px;
+        margin-bottom: 10px;
+        height: 260px;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        word-wrap: break-word;
+        top: 1px;
+        text-align: left;
+    }
+    #explanation {
+        position: relative;
+        top:90px;
+        alignment:top;
+    }
+</style>
+
+<body>
+<h1 style="color: #afaaaa; font-size: 30px; text-align: center; ">控制关系类型索引</h1>
+
+
+</div>
+
+<div id="mode">
+    <a href="./control.html" style="color: #afaaaa;font-size: 15px;width: 150px">Control</a>
+    <a href="./cross.html" style="color: #afaaaa;font-size: 15px;width: 150px">Cross</a>
+
+    <select style="color: #afaaaa;font-size: 15px;height: 38px" id="multi_select" onchange="window.open(this.options[this.selectedIndex].value)">
+        <option>请选择multi分组</option>
+        <option value="./multi_0.html">multi_0</option>
+        <option value="./multi_1.html">multi_1</option>
+        <option value="./multi_2.html">multi_2</option>
+        <option value="./multi_3.html">multi_3</option>
+    </select>
+
+    <select style="color: #afaaaa;font-size: 15px;height: 38px" id="double_select" onchange="window.open(this.options[this.selectedIndex].value)">
+        <option >请选择double分组</option>
+        <option value="./double_0.html">double_0</option>
+        <option value="./double_1.html">double_1</option>
+        <option value="./double_2.html">double_2</option>
+        <option value="./double_3.html">double_3</option>
+        <option value="./double_4.html">double_4</option>
+        <option value="./double_5.html">double_5</option>
+        <option value="./double_6.html">double_6</option>
+        <option value="./double_7.html">double_7</option>
+        <option value="./double_8.html">double_8</option>
+        <option value="./double_9.html">double_9</option>
+        <option value="./double_10.html">double_10</option>
+        <option value="./double_11.html">double_11</option>
+        <option value="./double_12.html">double_12</option>
+        <option value="./double_13.html">double_13</option>
+        <option value="./double_14.html">double_14</option>
+        <option value="./double_15.html">double_15</option>
+        <option value="./double_16.html">double_16</option>
+        <option value="./double_17.html">double_17</option>
+        <option value="./double_18.html">double_18</option>
+        <option value="./double_19.html">double_19</option>
+        <option value="./double_20.html">double_20</option>
+    </select>
+</div>
+
+<div id="explanation">
+    <span style="color: #afaaaa;position: relative;top:30px">control：不明确控制关系<br><br>所有含有“control”关系的子图,“control”关系在原始数据表中的控股比例为1314%，是一种不明确投资比例的控制关系，可能为职业任职投资关系</span>
+    <span style="color: #afaaaa;position: relative;top:30px">cross：交叉持股<br><br><br>所有含有交叉持股关系的子图，因为所有交叉持股的持股比例都为100%，在该页面中的所有子图不存在代表实际控制人的root节点<br></span>
+    <span style="color: #afaaaa;position: relative;top:30px">multi：超过两个节点以上的控股关系<br><br>每一个子图通过相应算法识别出了一个实际控制人，在页面中表示为蓝色的root节点，子图中其他企业被表示为黄色的normal节点<br></span>
+    <span style="color: #afaaaa;position: relative;top:30px">double：双节点的控股关系<br><br>每一个子图通过相应算法识别出了一个实际控制人，在页面中表示为蓝色的root节点，子图中其他企业被表示为黄色的normal节点<br></span>
+</div>
+<div id="img_index", style="position: absolute;left: 30px;top:200px">
+    <img src="../../res/image/control_index.jpg", style="width: 95px;height:110px">
+    <span style=" position: absolute;left: 0px;top:160px;color: #afaaaa;text-align: left;font-size: 13px">
+        <b>可视化视图说明</b><br>1、同一个子图中，较大的节点为该子图的控制人，控制人类型可根据颜色进行索引<br>2、边显示的数字则为控制比例
+    </span>
+</div>
+</body>
+
+<script>
+
+</script>
+</html>

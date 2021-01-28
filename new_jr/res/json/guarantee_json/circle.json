@@ -1,0 +1,642 @@
+{
+  "links": [
+    {
+      "source": "Tc7abf21ef5d117f96b22767e8f440af8",
+      "target": "Ta9d523511f06003a9341559051fd07ac",
+      "amount": 400.0
+    },
+    {
+      "source": "T930084353f6e074a4d685c06ab84141c",
+      "target": "T9e3710a82b2bee2f364e04cf9e15204a",
+      "amount": 1000000.0
+    },
+    {
+      "source": "T9e3710a82b2bee2f364e04cf9e15204a",
+      "target": "T5dde754b30b67bc284b939c8c9dfed4b",
+      "amount": 300.0
+    },
+    {
+      "source": "T9e3710a82b2bee2f364e04cf9e15204a",
+      "target": "T79234ecdedd6e6ee164bc009458303ae",
+      "amount": 1000000.0
+    },
+    {
+      "source": "T9e3710a82b2bee2f364e04cf9e15204a",
+      "target": "Ta9d523511f06003a9341559051fd07ac",
+      "amount": 2000000.0
+    },
+    {
+      "source": "T5dde754b30b67bc284b939c8c9dfed4b",
+      "target": "T930084353f6e074a4d685c06ab84141c",
+      "amount": 2000000.0
+    },
+    {
+      "source": "Ta9d523511f06003a9341559051fd07ac",
+      "target": "Tabd7bccf2c9e17ea20729f65524fc106",
+      "amount": 1600000.0
+    },
+    {
+      "source": "Ta9d523511f06003a9341559051fd07ac",
+      "target": "T5dde754b30b67bc284b939c8c9dfed4b",
+      "amount": 2000000.0
+    },
+    {
+      "source": "T4817e294b7fe26a35c7e421cbe77c4f0",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 5000.0
+    },
+    {
+      "source": "T1fc665c48ba576c5a6e586eab844301d",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 3300.0
+    },
+    {
+      "source": "T5a31d728f597a002de48e792a63a198e",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 209400.0
+    },
+    {
+      "source": "Tc3a6c2a546cd333d6c74b8bed94416c6",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 27762.0
+    },
+    {
+      "source": "Tc3a6c2a546cd333d6c74b8bed94416c6",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 47862.0
+    },
+    {
+      "source": "Tc3a6c2a546cd333d6c74b8bed94416c6",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 177232.0
+    },
+    {
+      "source": "Tee7f80913710874b0011fc7dc321b887",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 8642.0
+    },
+    {
+      "source": "Tee7f80913710874b0011fc7dc321b887",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 21276.0
+    },
+    {
+      "source": "Tee7f80913710874b0011fc7dc321b887",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 26400.0
+    },
+    {
+      "source": "Tb9da08681c5bad3e8d52b4d0dff9b8cc",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 3300.0
+    },
+    {
+      "source": "Te61ed8849b2822505ba60cc0b8018921",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 5500.0
+    },
+    {
+      "source": "T24a0028b748d8fcdc8a47ce75cf063f0",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 23600.0
+    },
+    {
+      "source": "Tdcd24b1dd5b98fbff3f447f287c12fd1",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 13732.0
+    },
+    {
+      "source": "T09955855242842a1081ad276276cd526",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 131800.0
+    },
+    {
+      "source": "Tc372d6af2b44c06b80eeb5a3391b1843",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 27762.0
+    },
+    {
+      "source": "Tc372d6af2b44c06b80eeb5a3391b1843",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 57376.0
+    },
+    {
+      "source": "Tc372d6af2b44c06b80eeb5a3391b1843",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 209400.0
+    },
+    {
+      "source": "T11db72a3f3ef3b10e5ef509abcb045bc",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 3850.0
+    },
+    {
+      "source": "Tbff2f5a9429d46e6433a7e38b6bc3754",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 11399.68
+    },
+    {
+      "source": "T8409d9f28ee18f59431e9dbe025fde29",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 13806.0
+    },
+    {
+      "source": "T8409d9f28ee18f59431e9dbe025fde29",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 27762.0
+    },
+    {
+      "source": "Tfb10a4a9facf4895bb3f1cfe0e26ba31",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 12800.0
+    },
+    {
+      "source": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 5320.0
+    },
+    {
+      "source": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 209400.0
+    },
+    {
+      "source": "Te3faeec5384fca6c5f2d9819aba96654",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 7100.0
+    },
+    {
+      "source": "Te3faeec5384fca6c5f2d9819aba96654",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 13806.0
+    },
+    {
+      "source": "T3810dbaef6b8616983fcea19bf9139dc",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 12300.0
+    },
+    {
+      "source": "T3810dbaef6b8616983fcea19bf9139dc",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 163500.0
+    },
+    {
+      "source": "T073e0d8926c52ca031fb525239ad4da1",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 27762.0
+    },
+    {
+      "source": "T073e0d8926c52ca031fb525239ad4da1",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 57376.0
+    },
+    {
+      "source": "T0a851791226e3ab45ff0857483c2de32",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 6600.0
+    },
+    {
+      "source": "T886e9a8b9c6b4a90d68df7ad1c84bd85",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 9300.0
+    },
+    {
+      "source": "Tbb00156830a91dbee6a66515ecd0f666",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 11300.0
+    },
+    {
+      "source": "Tbb00156830a91dbee6a66515ecd0f666",
+      "target": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "amount": 24000.0
+    },
+    {
+      "source": "Tbb00156830a91dbee6a66515ecd0f666",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 87600.0
+    },
+    {
+      "source": "Tbb00156830a91dbee6a66515ecd0f666",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 213200.0
+    },
+    {
+      "source": "Tf8c5605746d9ba0a268ca14838afea09",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 43862.0
+    },
+    {
+      "source": "Tf8c5605746d9ba0a268ca14838afea09",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 75182.0
+    },
+    {
+      "source": "Tf8c5605746d9ba0a268ca14838afea09",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 319132.0
+    },
+    {
+      "source": "T9e88347d307b0a75ab789c0d99f8be8e",
+      "target": "T3810dbaef6b8616983fcea19bf9139dc",
+      "amount": 18000.0
+    },
+    {
+      "source": "T9e88347d307b0a75ab789c0d99f8be8e",
+      "target": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "amount": 27762.0
+    },
+    {
+      "source": "T9e88347d307b0a75ab789c0d99f8be8e",
+      "target": "T073e0d8926c52ca031fb525239ad4da1",
+      "amount": 209400.0
+    },
+    {
+      "source": "Tea1e7cef6ef38d70d7a29c528b917780",
+      "target": "Te72c667f431ad30b1824a7bf14df4cbc",
+      "amount": 29763000.0
+    },
+    {
+      "source": "T9d3ff9c80fd8a5f7f4438846c43f19ce",
+      "target": "Tf1c857d5af73aa7d9697dc5bf75e9146",
+      "amount": 26437500.0
+    },
+    {
+      "source": "Ta4cf867f464302b0bb2c4e784d711d68",
+      "target": "Tc4fded011744c9100e4b6a77eb6566c1",
+      "amount": 9819000.0
+    },
+    {
+      "source": "Te72c667f431ad30b1824a7bf14df4cbc",
+      "target": "T9d3ff9c80fd8a5f7f4438846c43f19ce",
+      "amount": 28444500.0
+    },
+    {
+      "source": "Tc4fded011744c9100e4b6a77eb6566c1",
+      "target": "Tea1e7cef6ef38d70d7a29c528b917780",
+      "amount": 12001000.0
+    },
+    {
+      "source": "Tf1c857d5af73aa7d9697dc5bf75e9146",
+      "target": "T825e73307e8443d610bf82c3ac522671",
+      "amount": 25542000.0
+    },
+    {
+      "source": "T825e73307e8443d610bf82c3ac522671",
+      "target": "Ta4cf867f464302b0bb2c4e784d711d68",
+      "amount": 15696000.0
+    }
+  ],
+  "nodes": [
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.0,
+      "ctx": "Chain",
+      "Gid": 663,
+      "id": "Tc7abf21ef5d117f96b22767e8f440af8",
+      "m": 4.166362869374108e-05
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 15.712857142857144,
+      "ctx": "Circle",
+      "Gid": 663,
+      "id": "T930084353f6e074a4d685c06ab84141c",
+      "m": 0.31247721520305816
+    },
+    {
+      "group": 6,
+      "class": "doubleRisk",
+      "size": 19.285357142857144,
+      "ctx": "Cross, Circle",
+      "Gid": 663,
+      "id": "T9e3710a82b2bee2f364e04cf9e15204a",
+      "m": 0.41666753465893114
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 19.285357142857144,
+      "ctx": "Circle",
+      "Gid": 663,
+      "id": "T5dde754b30b67bc284b939c8c9dfed4b",
+      "m": 0.41666753465893114
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 10.712857142857143,
+      "ctx": "Chain",
+      "Gid": 663,
+      "id": "Tabd7bccf2c9e17ea20729f65524fc106",
+      "m": 0.16665451477496432
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 25.0,
+      "ctx": "Circle, Chain",
+      "Gid": 663,
+      "id": "Ta9d523511f06003a9341559051fd07ac",
+      "m": 0.583332465341069
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 8.57,
+      "ctx": "Chain",
+      "Gid": 663,
+      "id": "T79234ecdedd6e6ee164bc009458303ae",
+      "m": 0.10415907173435271
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.021432038375956,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T4817e294b7fe26a35c7e421cbe77c4f0",
+      "m": 0.0022394975269855867
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.0,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T1fc665c48ba576c5a6e586eab844301d",
+      "m": 0.0014780683678104873
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 7.598319476049697,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T5a31d728f597a002de48e792a63a198e",
+      "m": 0.09379015643015637
+    },
+    {
+      "group": 3,
+      "class": "Cross",
+      "size": 8.146172805264717,
+      "ctx": "Cross",
+      "Gid": 2504,
+      "id": "Tc3a6c2a546cd333d6c74b8bed94416c6",
+      "m": 0.1132540773366935
+    },
+    {
+      "group": 3,
+      "class": "Cross",
+      "size": 5.668402241539073,
+      "ctx": "Cross",
+      "Gid": 2504,
+      "id": "Tee7f80913710874b0011fc7dc321b887",
+      "m": 0.025224804344954853
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.0,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "Tb9da08681c5bad3e8d52b4d0dff9b8cc",
+      "m": 0.0014780683678104873
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.027735579074767,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "Te61ed8849b2822505ba60cc0b8018921",
+      "m": 0.0024634472796841453
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.255923752371707,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T24a0028b748d8fcdc8a47ce75cf063f0",
+      "m": 0.01057042832737197
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.131517073139983,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "Tdcd24b1dd5b98fbff3f447f287c12fd1",
+      "m": 0.0061505560081132156
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 6.620009959594304,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T09955855242842a1081ad276276cd526",
+      "m": 0.05903315481134007
+    },
+    {
+      "group": 2,
+      "class": "Focus",
+      "size": 6.279614727592488,
+      "ctx": "Focus",
+      "Gid": 2504,
+      "id": "T51f0ec65ecbf4da1e057253481c20fcc",
+      "m": 0.04693972483777617
+    },
+    {
+      "group": 3,
+      "class": "Cross",
+      "size": 8.671661172080357,
+      "ctx": "Cross",
+      "Gid": 2504,
+      "id": "Tc372d6af2b44c06b80eeb5a3391b1843",
+      "m": 0.13192342452065614
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.006933894768691,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T11db72a3f3ef3b10e5ef509abcb045bc",
+      "m": 0.0017244130957789017
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.102113325054683,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "Tbff2f5a9429d46e6433a7e38b6bc3754",
+      "m": 0.005105911033685411
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.482447790924162,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T8409d9f28ee18f59431e9dbe025fde29",
+      "m": 0.018618286640347374
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.1197672732774,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "Tfb10a4a9facf4895bb3f1cfe0e26ba31",
+      "m": 0.005733113669083102
+    },
+    {
+      "group": 7,
+      "class": "tripleRisk",
+      "size": 8.029759015639083,
+      "ctx": "Focus, Mutual, Circle",
+      "Gid": 2504,
+      "id": "T5c0b7ccc5555b5216ebf0bc305209ac3",
+      "m": 0.10911817330385652
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.221960275086516,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "Te3faeec5384fca6c5f2d9819aba96654",
+      "m": 0.009363787059832136
+    },
+    {
+      "group": 7,
+      "class": "tripleRisk",
+      "size": 9.899742185185419,
+      "ctx": "Focus, Mutual, Circle",
+      "Gid": 2504,
+      "id": "T3810dbaef6b8616983fcea19bf9139dc",
+      "m": 0.17555421114040015
+    },
+    {
+      "group": 7,
+      "class": "tripleRisk",
+      "size": 25.0,
+      "ctx": "Focus, Mutual, Circle",
+      "Gid": 2504,
+      "id": "T073e0d8926c52ca031fb525239ad4da1",
+      "m": 0.7120303227248514
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.041603368612149,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T0a851791226e3ab45ff0857483c2de32",
+      "m": 0.0029561367356209746
+    },
+    {
+      "group": 0,
+      "class": "Chain",
+      "size": 5.075642488385726,
+      "ctx": "Chain",
+      "Gid": 2504,
+      "id": "T886e9a8b9c6b4a90d68df7ad1c84bd85",
+      "m": 0.004165465400193191
+    },
+    {
+      "group": 3,
+      "class": "Cross",
+      "size": 9.195636689128282,
+      "ctx": "Cross",
+      "Gid": 2504,
+      "id": "Tbb00156830a91dbee6a66515ecd0f666",
+      "m": 0.15053902376397113
+    },
+    {
+      "group": 3,
+      "class": "Cross",
+      "size": 10.482517129871848,
+      "ctx": "Cross",
+      "Gid": 2504,
+      "id": "Tf8c5605746d9ba0a268ca14838afea09",
+      "m": 0.1962588136768873
+    },
+    {
+      "group": 3,
+      "class": "Cross",
+      "size": 8.175244734967631,
+      "ctx": "Cross",
+      "Gid": 2504,
+      "id": "T9e88347d307b0a75ab789c0d99f8be8e",
+      "m": 0.11428693359613926
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 15.962006183442114,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "Tea1e7cef6ef38d70d7a29c528b917780",
+      "m": 0.28275661293270954
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 23.1721745104775,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "T9d3ff9c80fd8a5f7f4438846c43f19ce",
+      "m": 0.37156997488202675
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 7.030917210580555,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "Ta4cf867f464302b0bb2c4e784d711d68",
+      "m": 0.17274530645958444
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 25.0,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "Te72c667f431ad30b1824a7bf14df4cbc",
+      "m": 0.3940847511560361
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 5.0,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "Tc4fded011744c9100e4b6a77eb6566c1",
+      "m": 0.14772888837735187
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 21.576846444520786,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "Tf1c857d5af73aa7d9697dc5bf75e9146",
+      "m": 0.35191905377683597
+    },
+    {
+      "group": 4,
+      "class": "Circle",
+      "size": 15.67289591205771,
+      "ctx": "Circle",
+      "Gid": 4663,
+      "id": "T825e73307e8443d610bf82c3ac522671",
+      "m": 0.2791954124154553
+    }
+  ]
+}

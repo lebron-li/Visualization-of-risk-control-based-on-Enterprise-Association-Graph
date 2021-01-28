@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于关联图谱的企业关系识别</title>
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/bootstrap.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <base target="_blank" />
+</head>
+
+<style>
+    body {
+        background-color: #2a2b30;
+        padding: 30px 40px;
+        text-align: center;
+        /*font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;*/
+    }
+    #mode a.active,#mode a:hover{
+        background-color: white;
+        color: #333;
+        cursor: pointer;
+    }
+    #mode a {
+        display: inline-block;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: color, background-color .3s;
+        -o-transition: color, background-color .3s;
+        -ms-transition: color, background-color .3s;
+        -moz-transition: color, background-color .3s;
+        -webkit-transition: color, background-color .3s;
+    }
+    #mode {
+        position: relative;
+        top:80px;
+        alignment: center;
+
+    }
+    #img {
+        margin-top: 50px;
+    }
+
+</style>
+
+<body>
+<h1 style="color: azure; font-size: 30px; text-align: center; ">“江苏银行”杯金融大数据建模挑战赛</h1>
+<h1 style="color: azure; font-size: 25px; text-align: center; "> —— 基于关联图谱的企业关系识别</h1>
+<br>
+<h1 style="color: azure; font-size: 20px; text-align: center; ">作者：陈志祥 李正材</h1>
+<div id="img">
+    <img src="./res/image/jiangsu.jpg", width="150px", height="150px">
+    <img src="./res/image/nupt.jpg", width="230px", height="150px">
+</div>
+
+<div id="mode">
+    <a href="./html/control_html/control_index.html" style="color: #f2f2f2;font-size: 20px">控制关系</a>
+    <a href="./html/guarantee_html/guarantee_index.html" style="color: #f2f2f2;font-size: 20px">担保关系</a>
+    <a href="./html/moneyCollection_html/moneyCollection_index.html" style="color: #f2f2f2;font-size: 20px">资金归集关系</a>
+</div>
+
+<div style="position:absolute;left: 30px;top: 180px">
+    <span style="color: #afaaaa;position: relative;font-size: 13px;width: 250px;display: inline-block;text-align: left">
+        <b>操作指南</b><br><br>
+        1、搜索框：<br>’search by type‘：通过节点类型在子图中查找节点<br>’search by id‘：通过节点id在子图中查找节点
+        <br>2、界面默认展示为圆形展示，可点击text按键切换到id展示<br>3、缩放功能：在图形区域通过滑动鼠标滚轮实现可视化界面缩放
+        <br>4、可视化界面移动功能：左键点击并按住左键进行拖拽<br>
+        5、鼠标指针交互事件：鼠标指针移动到某一节点后，右上角显示该节点的id和类型，且只保留该节点所在的子图，其他子图做半透明处理
+    </span>
+
+</div>
+</body>
+<script>
+
+</script>
+</html>
