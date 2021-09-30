@@ -15,7 +15,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1le8NhnYzW474QJVCWj4HMm4BGx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,6 +27,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/leetcode" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -52,6 +57,7 @@
       <workItem from="1608082786604" duration="15000" />
       <workItem from="1608119357849" duration="1035000" />
       <workItem from="1608378046802" duration="65000" />
+      <workItem from="1632968988431" duration="1740000" />
     </task>
     <servers />
   </component>
