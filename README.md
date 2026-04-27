@@ -1,7 +1,5 @@
-# 项目背景
-“随e融杯”金融大数据挑战赛一等奖
-可视化主要使用的是D3.js
-# 安装
-全为HTML、CSS、JavaScript，无需安装
-# 使用
-由于保密需要，相关数据已做脱敏处理，请使用者根据不同风险类型的代码自定义数据。我们首先通过一系列数据分析找出了不同的风险类型，然后使用该代码进行风险可视化
+# Vue 3 + Vite
+
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
